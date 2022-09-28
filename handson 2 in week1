@@ -49,3 +49,77 @@ class main{
         
     }
 }
+
+
+Q 5
+
+// You are using Java
+import java.util.*;
+class main{
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int n1=sc.nextInt();
+        if(n1==1){
+            double radius=sc.nextDouble();
+            shape obj=new circle(radius);
+            obj.name();
+        }else if(n1==2){
+            double len=sc.nextDouble();
+            double breadth=sc.nextDouble();
+            shape obj=new rectangle(len,breadth);
+            obj.name();
+        }else if(n1==3){
+            double b=sc.nextDouble();
+            double h=sc.nextDouble();
+           triangle ob=new triangle(b,h);
+           ob.name();
+        }else {
+            System.out.println("Invalid");
+        }
+    
+    }
+    
+}  
+
+class shape{
+    double area;
+    public void name(){
+        area =0;
+    }
+}
+class circle extends shape{
+    
+    double radius;
+    circle(double radius){
+        this.radius=radius;
+}
+    public void name(){
+        System.out.println(3.14*(radius*radius));
+    }
+    
+}
+class rectangle extends shape{
+    
+    double len;
+    double breadth;
+    rectangle(double len,double breadth){
+        this.len=len;
+        this.breadth=breadth;
+    }
+    public void name(){
+        System.out.println(len*breadth);
+    }
+    
+}
+class triangle extends shape{
+    double base;
+    double height;
+    triangle(double b, double h){
+        this.base=b;
+        this.height=h;
+    }
+     public void name(){
+        System.out.println(0.5*(base*height));
+    }
+    
+}
