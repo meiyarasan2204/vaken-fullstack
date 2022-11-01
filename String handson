@@ -1,0 +1,137 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main{
+    public static void main(String[] args) throws java.lang.Exception{
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        Alphabets ob = new Alphabets();
+        ob.main(str);
+    }
+}
+class Alphabets extends Main{
+    void main(String str){
+        char chr[] = str.toCharArray();
+        for(int i=0;i<chr.length-1;i++){
+            if(Character.isUpperCase(chr[i])){
+                System.out.print(chr[i]);
+                if(Character.isLowerCase(chr[i+1])){
+                    System.out.println("");
+                }
+            }
+            if(Character.isLowerCase(chr[i])){
+                System.out.print(chr[i]);
+                if(Character.isUpperCase(chr[i+1])){
+                    System.out.println("");
+                }
+            }
+        }
+    }
+}
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String[] arr = s.split(" ");
+        StringBuffer line = new StringBuffer();
+        for(String Word:arr){
+            if(!Word.equals("")){
+                line.append(Word+" ");
+            }
+        }
+        System.out.println(line);
+    }
+}
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main{
+    public static void main(String[] args) throws java.lang.Exception{
+        Scanner inp = new Scanner(System.in);
+        LineCount ob = new LineCount();
+        int count = 0;
+         while(inp.hasNext()){
+            String str = inp.nextLine();
+            if(str.equals("q")){
+                break;
+            }
+            count+=ob.main(str);
+         }
+         System.out.println(count);
+    }
+}
+class LineCount extends Main{
+    int main(String str){
+        String[] lines = str.split("\r\n|\r|\n");
+        return lines.length;
+    }
+}
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main{
+    public static void main(String[] args) throws java.lang.Exception{
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        System.out.println(reverseString(str));
+    }
+    static String reverseString(String str){
+        StringBuffer p = new StringBuffer(str);
+        String rev = p.reverse().toString();
+        return rev;
+    }
+}
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String[] arr = s.split(" ");
+        StringBuffer line = new StringBuffer();
+        for(int i=0;i<arr.length-1;i++){
+            if(!arr[i].equals("")){
+                line.append(arr[i]+" ");
+            }
+        }
+        line.append(arr[arr.length-1]);
+        System.out.println(line);
+    }
+}
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        sc.nextLine();
+        String[] list=new String[N];
+        for(int i=0;i<N;i++){
+            list[i]=sc.nextLine();
+        }
+        sc.close();
+        String[] arry = Arrays.stream(list).sorted(Comparator.comparingInt(String::length)).toArray(String[]::new);
+        StringBuffer str = new StringBuffer();
+        for(int i=0;i<N-1;i++){
+            str.append(arry[i]+" ");
+        }
+        str.append(arry[N-1]);
+        System.out.println(str);
+    }
+}
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String[] arr = s.split(" ");
+        StringBuffer line = new StringBuffer();
+        for(String Word:arr){
+            if(!Word.equals("")){
+                line.append(Word+" ");
+            }
+        }
+        System.out.println(line);
+    }
+}
+
